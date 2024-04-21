@@ -15,11 +15,14 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "All Rights Reserved",
-	"icon": "assets/pigindelivery/icon.png",
+	"icon": "assets/pigin_mail/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"com.piginmail.Pigindelivery"
+		],
+		"client": [
+			"com.piginmail.PigindeliveryClient"
 		],
 		"fabric-datagen": [
 			"com.piginmail.PigindeliveryDataGenerator"
