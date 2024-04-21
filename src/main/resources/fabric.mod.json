@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "pigin_mail",
+	"version": "0.1.0",
+	"name": "Pigeon Delivery",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"DrippzyTox",
+		"HappyMochaNoises",
+		"Overgrown",
+		"KirboSoftware"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "All Rights Reserved",
+	"icon": "assets/pigindelivery/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.piginmail.Pigindelivery"
+		],
+		"fabric-datagen": [
+			"com.piginmail.PigindeliveryDataGenerator"
+		]
+	},
+	"mixins": [
+		"pigindelivery.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.9",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
