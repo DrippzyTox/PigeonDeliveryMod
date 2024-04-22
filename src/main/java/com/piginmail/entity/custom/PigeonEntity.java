@@ -47,7 +47,7 @@ public class PigeonEntity extends AnimalEntity implements GeoEntity {
     public static DefaultAttributeContainer.Builder createPigeonAttributes(){
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 10)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.2f)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.05f)
                 .add(EntityAttributes.GENERIC_FLYING_SPEED, 0.3f);
 }
 
@@ -62,6 +62,7 @@ public class PigeonEntity extends AnimalEntity implements GeoEntity {
         return ModEntities.PIGEON.create(world);
     }
 
+    // current implemented animations
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, "Idle", 5, this::idleAnimController));
