@@ -9,7 +9,7 @@ import net.minecraft.item.SpawnEggItem;
 public class PDItems {
     public static final Item PIPE_BOMB = new PipeBombItem(new Item.Settings());
     public static final Item BREAD_CRUMBS = new Item(new Item.Settings());
-    public static final Item FOREST_PIGEON = new SpawnEggItem(ModEntities.PIGEON, 0x80FF80, 0x808080, new Item.Settings());
+    public static final Item FOREST_PIGEON = new SpawnEggItem(ModEntities.PIGEON, 0x808080, 0x80FF80, new Item.Settings());
 
 
     static {
