@@ -1,7 +1,7 @@
 package com.piginmail.entity.custom;
 
 import com.piginmail.entity.ModEntities;
-import com.piginmail.item.PDitems;
+import com.piginmail.item.PDItems;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -37,7 +37,7 @@ public class PigeonEntity extends AnimalEntity implements GeoEntity {
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(1, new AnimalMateGoal(this, 1.100));
-        this.goalSelector.add(2, new TemptGoal(this,1.20D, Ingredient.ofItems(PDitems.BREAD_CRUMBS),false ));
+        this.goalSelector.add(2, new TemptGoal(this,1.20D, Ingredient.ofItems(PDItems.BREAD_CRUMBS),false ));
 
         this.goalSelector.add(3, new WanderAroundFarGoal(this, 1.2D));
         this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 4f));
@@ -53,7 +53,7 @@ public class PigeonEntity extends AnimalEntity implements GeoEntity {
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-        return stack.isOf(PDitems.BREAD_CRUMBS);
+        return stack.isOf(PDItems.BREAD_CRUMBS);
     }
 
     @Nullable
@@ -64,8 +64,8 @@ public class PigeonEntity extends AnimalEntity implements GeoEntity {
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "idle", 5, this::idleAnimController));
-        controllers.add(new AnimationController<>(this, "walk", 10, this::walkAnimController));
+        controllers.add(new AnimationController<>(this, "Idle", 5, this::idleAnimController));
+        controllers.add(new AnimationController<>(this, "Walk", 10, this::walkAnimController));
     }
 
     protected <E extends PigeonEntity> PlayState idleAnimController(final AnimationState<E> state) {

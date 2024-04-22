@@ -2,7 +2,8 @@ package com.piginmail;
 
 import com.piginmail.entity.ModEntities;
 import com.piginmail.entity.custom.PigeonEntity;
-import com.piginmail.item.PDitems;
+import com.piginmail.item.PDItems;
+import com.piginmail.item.group.PDItemGroup;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -22,9 +23,10 @@ public class Pigindelivery implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		PDitems.init();
+		PDItems.init();
 		FabricDefaultAttributeRegistry.register(ModEntities.PIGEON, PigeonEntity.createPigeonAttributes());
 
+		PDItemGroup.init();
 
 		LOGGER.info("Pigeons Be flapping!");
 

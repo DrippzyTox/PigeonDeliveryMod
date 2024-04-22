@@ -39,6 +39,10 @@ dependencies {
     compileOnly("com.eliotlash.mclib:mclib:20")
 }
 
+fabricApi {
+    configureDataGeneration()
+}
+
 processResources {
     inputs.property "version", project.version
     inputs.property "minecraft_version", project.minecraft_version
