@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "pigin_mail",
 	"version": "0.1.0",
-	"name": "Pigeon Delivery",
+	"name": "Pigin Mail",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"DrippzyTox",
@@ -14,7 +14,7 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "All Rights Reserved",
+	"license": "unlicense",
 	"icon": "assets/pigin_mail/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -29,7 +29,7 @@
 		]
 	},
 	"mixins": [
-		"pigindelivery.mixins.json"
+		"pigin_mail.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.7",
@@ -37,5 +37,13 @@
 		"java": ">=17",
 		"fabric-api": "*",
 		"geckolib": ">=4.0.0"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.discord": "https://discord.gg/Q8JBubPKMV"
+			},
+			"update_checker": false
+		}
 	}
 }
